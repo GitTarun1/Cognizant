@@ -1,0 +1,14 @@
+Hands-On 1, Task 1 — one-line purpose of each generated file
+---------------------------------------------------------------
+angular.json          Workspace/project configuration: build targets, file replacements, budgets, styles/scripts arrays.
+tsconfig.json          Root TypeScript compiler options shared by the whole workspace (strict mode, target, paths).
+tsconfig.app.json      TypeScript config specific to compiling the browser application (extends tsconfig.json).
+package.json           Lists npm dependencies/devDependencies and the ng/npm scripts (start, build, test).
+src/main.ts            Application entry point; bootstraps the root standalone component (App) using appConfig.
+src/app/app.config.ts  Standalone app-wide providers: router, HttpClient + interceptors, NgRx store/effects/devtools.
+src/app/app.ts         Root component; hosts the header, global loading spinner, and <router-outlet>.
+src/index.html         The single HTML shell page the whole SPA is rendered into (has the <app-root> tag).
+
+angular.json budgets (architect > build > configurations > production):
+  maximumWarning — bundle size (or file size) past which the CLI prints a build warning but still succeeds.
+  maximumError   — bundle size past which the CLI FAILS the production build outright, forcing you to trim it.
